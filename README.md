@@ -7,7 +7,6 @@ Este é um quiz interativo desenvolvido para testar conhecimentos básicos sobre
 - HTML5
 - CSS3
 - JavaScript (DOM e manipulação de eventos)
-- Font Awesome (para ícones de navegação)
 
 ## Funcionalidades
 - ✅ Sistema de perguntas e respostas com verificação de acertos.  
