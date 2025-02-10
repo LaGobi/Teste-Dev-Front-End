@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Front-End</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <h1><b>TESTE</b> DEV FRONT-END</h1>
+    <div class="quiz-container">
+        <div class="question" id="question1">
+            <p data-num="1"> Qual tecnologia é usada para estilizar páginas web? </p>
+            <label><input type="radio" name="q1" value="html" onclick="checkAnswer(1)"> HTML </label>
+            <label><input type="radio" name="q1" value="css" data-correct="true" onclick="checkAnswer(1)"> CSS </label>
+            <label><input type="radio" name="q1" value="js" onclick="checkAnswer(1)"> JavaScript </label>
+            <label><input type="radio" name="q1" value="php" onclick="checkAnswer(1)"> PHP </label>
+        </div>
+
+        <div class="question" id="question2" style="display:none;">
+            <p data-num="2"> Qual linguagem é usada para manipular o DOM? </p>
+            <label><input type="radio" name="q2" value="css" onclick="checkAnswer(2)"> CSS </label>
+            <label><input type="radio" name="q2" value="html" onclick="checkAnswer(2)"> HTML </label>
+            <label><input type="radio" name="q2" value="js" data-correct="true" onclick="checkAnswer(2)"> JavaScript </label>
+            <label><input type="radio" name="q2" value="php" onclick="checkAnswer(2)"> PHP </label>
+        </div>
+
+        <div class="question" id="question3" style="display:none;">
+            <p data-num="3"> Qual tecnologia não faz parte do Front-End? </p>
+            <label><input type="radio" name="q3" value="css" onclick="checkAnswer(3)"> CSS </label>
+            <label><input type="radio" name="q3" value="html" onclick="checkAnswer(3)"> HTML </label>
+            <label><input type="radio" name="q3" value="php" data-correct="true" onclick="checkAnswer(3)"> PHP </label>
+            <label><input type="radio" name="q3" value="js" onclick="checkAnswer(3)"> JavaScript </label>
+        </div>
+    </div>
+
+    <div class="navigation">      
+        <i class="fa fa-arrow-left"></i>  
+        <button onclick="goToQuestion(1)" active>1</button>
+        <button onclick="goToQuestion(2)" disabled>2</button>
+        <button onclick="goToQuestion(3)" disabled>3</button>
+    </div>
+
+    <div class="finalizar-container" style="display: none;">
+        <button id="finalizar" onclick="finalizarQuiz()">Finalizar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

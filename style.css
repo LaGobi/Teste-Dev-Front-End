@@ -1,0 +1,265 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(./assents/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100dvh;
+    height: auto;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 4rem;
+    text-align: left;
+    margin-top: -30px;
+    align-self: flex-start;
+    margin-left: 22%;  
+    margin-top: 10px;
+    padding-top: 20px;
+    padding: 10px 0; 
+
+}
+
+.h1{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 20px;
+}
+
+.quiz-container{
+    background: rgba(24, 24, 24, 0.9); 
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba (0,0, 0, 0.2);
+    width: 50%;
+    color: white;
+    text-align: center;
+    border: #e67000;
+    white-space: center nowrap;
+}
+
+.question {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.question p {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 30px;
+}
+
+.question p::before {
+    content: attr(data-num) "";
+    font-weight: bold;
+    color:white;
+    font-size: 40px;
+    background-color: #e67000;
+    border-radius: 8%;
+    padding: 2px 14px;
+    text-align: center;
+    
+}
+
+
+
+input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+    width:0;
+    height: 0;
+}
+
+label {
+    display: flex;
+    padding: 20px; 
+    border-radius: 5px;
+    margin: 30px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 18px;
+    color: #bbb;
+    border: 1px solid #3b3b3b;
+    text-align: left;
+    width: auto;
+
+}
+
+label:hover{
+    background: #e67000;
+    color: white;
+}
+
+label.correct {
+    background-color: #4caf50; 
+    color: white; 
+    transition: background 0.5s ease;
+}
+
+.finalizar-container button{
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    font-size: 20px;
+    padding:10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.finalizar-container button:hover {
+    background-color: darkgreen;
+}
+
+
+
+button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid #e67000;
+    padding: 1px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 16px;
+    margin-top: 15px;
+    display: flex;
+}
+
+button.active {
+    background-color: #e67000;
+    color: white;
+    border: 1px solid #e67000;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #e67000;
+    padding: 1px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+button:hover:not(:disabled) {
+    background-color: #e67000;
+}
+
+
+.navigation {
+    display: flex;
+    gap: 8px; 
+    margin-top: 40px; 
+    width: 50%; 
+}
+
+.navigation i{
+    cursor: pointer;
+    display: flex;
+    margin-top: 18px;
+    margin-right: 10px;
+}
+
+
+button:disabled{
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #e67000;
+}
+
+.finalizar:hover {
+    background-color: #e67000;
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .quiz-container {
+        width: 90%;
+        padding: 20px;
+        overflow-y: hidden;
+        
+    }
+    label {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .navigation button {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        margin: 2rem;
+    }
+
+    .quiz-container {
+        width: 100%;
+        padding: 15px;
+
+    }
+    label {
+        font-size: 12px;
+        padding: 8px;
+        width: auto;
+    }
+
+    .question{
+        font-size: 1rem;
+        
+    }
+
+    .navigation button {
+        width: 35px;
+        height: 35px;
+        font-size: 10px;
+    }
+
+    .finalizar-container button{
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    button .finalizar-container {
+        margin-top: 40px;
+    }
+    .navigation {
+        margin-top: 30px; 
+    }
+}
